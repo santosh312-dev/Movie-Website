@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0d0d0f; /* dark cinema-style */
+  color: #fff;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+  letter-spacing: 1px;
+}
+
+/* Search Section */
+.search-container {
+  margin-bottom: 40px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.search input {
+  width: 320px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #1a1a1d;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search input:focus {
+  background: #26262a;
+  border: 1px solid #ff4d4d;
+}
+
+.search button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search button:hover {
+  background: #e63939;
+  transform: scale(1.05);
+}
+
+/* Movies Section */
+.movies-container {
+  margin-top: 20px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center; /* center the grid items */
+  justify-items: center;   /* center each movie inside its cell */
+}
+
+
+.movies img {
+  width: 100%;
+  max-width: 200px;    /* limit max width */
+  height: 250px;       /* standard poster ratio */
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movies img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search input {
+    width: 200px;
+  }
+
+  .movies img {
+    max-width: 160px;
+    height: 240px;
+  }
+}
